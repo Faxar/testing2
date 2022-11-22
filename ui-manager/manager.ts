@@ -1,7 +1,8 @@
 import { Browser, Element } from "webdriverio";
+import { Clicker } from "./Clicker";
 import { Selector } from "./selector";
 
-export class UIManager {
+export class UIManager implements Clicker<Browser<'async'>, Element<'async'>> {
     driver: Browser<'async'>;
     maxElementWaitMs = 50000;
 
