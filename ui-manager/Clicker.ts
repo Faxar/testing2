@@ -6,5 +6,5 @@ export interface Clicker<Driver, DriverElement> {
 
     wait(ms: number): Promise<void>;
 
-    tapElement(elementSelector: Selector): Promise<void>;
+    tapElement(elementSelector: Selector): Promise<DriverElement>;
 }

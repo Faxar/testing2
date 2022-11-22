@@ -24,8 +24,9 @@ export class UIManager implements Clicker<Browser<'async'>, Element<'async'>> {
 
     async tapElement(elementSelector: Selector) {
         try {
+            await (await this.findElement(elementSelector)).waitForExist();
             const element = await this.findElement(elementSelector);
-            await element.click();
+            return element;
         } catch (error) {
             throw new Error(
                 `Failed to tap ${elementSelector.description} element by given selectro "${elementSelector}". \n${error}`
