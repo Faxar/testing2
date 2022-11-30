@@ -7,6 +7,7 @@ export const config: Options.Testrunner = {
     // ====================
     //
     port: 4723,
+    path: '/wd/hub',
     //
     // =====================
     // ts-node Configurations
@@ -51,7 +52,8 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        './tests/**/*.ts'
+        './tests/*.ts'
+        
     ],
     // Patterns to exclude.
     exclude: [
@@ -84,8 +86,6 @@ export const config: Options.Testrunner = {
         'automationName':'UiAutomator2',
         'deviceName':'R5CN201FZ3R',
         'platformVersion':'12',
-        'appPackage':'com.stagnationlab.sk',
-        'appActivity':'com.stagnationlab.sk.MainActivity',
         'path': "/wd/hub"
     }],
     //

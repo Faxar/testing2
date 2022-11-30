@@ -1,10 +1,10 @@
-import { uiManager } from "../ui-manager/manager";
+import { uiManager } from '../ui-manager'
 import { idSettingsButton } from "./selectorsMainView";
 
 
 export async function openSettingsView() {
   await uiManager.swipeDown();
-  if(uiManager.elementDoesExist(idSettingsButton)) {
+  if(await uiManager.elementDoesExist(idSettingsButton)) {
     await uiManager.tapElement(idSettingsButton)
   }
 }

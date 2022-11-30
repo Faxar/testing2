@@ -8,5 +8,7 @@ export interface Clicker<Driver, DriverElement> {
 
     tapElement(elementSelector: Selector): Promise<DriverElement>;
 
-    
+    swipeDown(): Promise<void>;
+
+    elementDoesExist(elementSelector: Selector, timeout?: number): Promise<boolean>;
 }

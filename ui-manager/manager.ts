@@ -56,6 +56,15 @@ export class UIManager implements Clicker<Browser<'async'>, Element<'async'>> {
         })
     }
 
-
+    async elementDoesExist(elementSelector: Selector, timeout?: number) {
+		//uiLogger.info(`Waiting for "${elementSelector.description}" element is displayed...`);
+		try {
+			const element = await this.findElement(elementSelector);
+			await element.waitForExist({ timeout: timeout || this.maxElementWaitMs });
+			return true;
+		} catch {
+			return false;
+		}
+	}
 
 }
