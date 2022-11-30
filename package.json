@@ -12,8 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "crypto-js": "^4.1.1",
+    "https": "^1.0.0",
     "smart-id-rest": "^1.2.4",
-    "webdriverio": "^7.26.0"
+    "utf8": "^3.0.0",
+    "webdriverio": "^7.26.0",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
     "@wdio/appium-service": "^7.26.0",
